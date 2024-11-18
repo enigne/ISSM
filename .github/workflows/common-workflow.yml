@@ -40,6 +40,14 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
           
+      - name: Symlink gfortran (macOS)
+        if: runner.os == 'macOS'
+        run: |
+          sudo ln -s /usr/local/bin/gfortran-11 /usr/local/bin/gfortran
+          sudo mkdir /usr/local/gfortran
+          sudo ln -s /usr/local/Cellar/gcc@11/*/lib/gcc/11 /usr/local/gfortran/lib
+          gfortran --version
+
       - name: Cache externalpackages
         uses: actions/cache@v3
         id: cache-externalpackages
