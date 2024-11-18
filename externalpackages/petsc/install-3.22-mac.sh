@@ -36,6 +36,7 @@ cd ${PETSC_DIR}
 	--prefix="${PREFIX}" \
 	--PETSC_DIR="${PETSC_DIR}" \
 	--LDFLAGS="${LDFLAGS}" \
+	--FFLAGS="-fallow-argument-mismatch"\
 	--with-debugging=0 \
 	--with-valgrind=0 \
 	--with-x=0 \

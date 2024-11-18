@@ -23,7 +23,6 @@ mv TEMP src/src/include/mpiimpl.h
 cd src
 ./configure \
 	--prefix="$ISSM_DIR/externalpackages/mpich/install" \
-	--FFLAGS="-fallow-argument-mismatch" \
 	--enable-shared
 
 #Compile mpich (this new version supports parallel make)
