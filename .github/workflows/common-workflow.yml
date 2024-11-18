@@ -43,6 +43,8 @@ jobs:
       - name: Symlink gfortran (macOS)
         if: runner.os == 'macOS'
         run: |
+          ls /usr/local/bin/
+          ls /usr/local/Cellar/
           gfortran-11 --version
           gfortran-12 --version
           sudo ln -s /usr/local/bin/gfortran-11 /usr/local/bin/gfortran
