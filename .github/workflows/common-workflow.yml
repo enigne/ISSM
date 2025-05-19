@@ -60,7 +60,7 @@ jobs:
         if: ${{ inputs.interface == 'matlab' }}
         id: setup-matlab
         uses: matlab-actions/setup-matlab@v2
-        with:
+        with: 
           release: latest
           cache: true
 
