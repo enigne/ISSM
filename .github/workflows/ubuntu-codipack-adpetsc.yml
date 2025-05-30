@@ -18,6 +18,7 @@ jobs:
       build_command: |
         source $ISSM_DIR/etc/environment.sh
         autoreconf -ivf
+        export CXXFLAGS="-g -O3 -fPIC -std=c++11 -DCODI_ForcedInlines"
         ./configure --prefix=${ISSM_DIR} \
         --enable-tape-alloc \
         --enable-development \
